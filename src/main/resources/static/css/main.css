@@ -1,6 +1,11 @@
 h1{
-    color: darkgreen;
+    color: darkslateblue;
 }
 h2{
-    color: darkred;
+    color: orange;
+}
+
+label{
+    color: darkslateblue;
+    font-weight: bold;
 }
