@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
+    <title>Title</title>
+</head>
+<body>
+<h1>Index</h1>
+<h2>Hello SpringBoard!</h2>
+
+<a href="Hello.html" th:href="@{/Hello}">TO HELLO PAGE</a>
+<a href="Input.html" th:href="@{/Input}">TO INPUT PAGE</a>
+
+<ul>
+    <h3>One Request Parameters in Links</h3>
+    <li>
+        <a href="Hello.html" th:href="@{/Hello(name='Jeff')}">Hello Jeff</a>
+    </li>
+    <li>
+        <a href="Hello.html" th:href="@{/Hello(name='Bart Simpson')}">Hello Bart Simpson</a>
+    </li>
+    <h3>Two Request Parameters in Links</h3>
+    <li>
+        <a href="Output.html" th:href="@{/Output(firstName='Bart',lastName='Simpson')}">Bart Simpson</a>
+    </li>
+<h3>Path Variable in Links</h3>
+    <li>
+        <a href="Hello.html" th:href="@{/Hello/{name}(name='Jeff')}">Jeff</a>
+    </li>
+    <li>
+        <a href="Hello.html" th:href="@{/Hello/{name}(name='Marge Simpson')}">Marge Simpson</a>
+    </li>
+</ul>
+
+</body>
+</html>
