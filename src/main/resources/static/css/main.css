@@ -5,6 +5,14 @@ h2{
     color: orange;
 }
 
+h3.error{
+    color: red;
+
+}
+li.error{
+    color: red;
+    font-style: italic;
+}
 label{
     color: darkslateblue;
     font-weight: bold;

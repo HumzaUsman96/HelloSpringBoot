@@ -16,7 +16,9 @@ import sheridan.usmanhu.hellospringboot.domain.User;
 public class NameController {
 private final Logger logger = LoggerFactory.getLogger(NameController.class);
     @GetMapping("/Input")
-    public String input(){
+    public String input(@ModelAttribute User user, Model model){
+        model.addAttribute(user);
+
         logger.trace("input() is called");
 
 
@@ -28,9 +30,11 @@ private final Logger logger = LoggerFactory.getLogger(NameController.class);
         logger.trace("output() is called");
         logger.debug(user.toString());
         if (bindingResult.hasErrors()){
+            logger.trace("Errors in the user Input");
             return "Input";
         }else{
             model.addAttribute("user",user);
+            logger.trace("Input is alright");
             return "Output";
         }
 
